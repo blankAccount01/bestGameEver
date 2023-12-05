@@ -14,6 +14,8 @@ screen = pygame.display.set_mode((X, Y))
 
 # set the pygame window name
 pygame.display.set_caption('THIS IS THE BEST GAME EVER')
+icon = pygame.image.load("assets/enemy.png")
+pygame.display.set_icon(icon)
 
 def blitRotate(surf, image, pos, originPos, angle):
     image_rect = image.get_rect(topleft = (pos[0] - originPos[0], pos[1]-originPos[1]))
