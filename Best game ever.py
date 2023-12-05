@@ -31,11 +31,11 @@ class Player():
         self.location = [450,250]
         self.health = 3
         self.shield = False
-        self.imp = pygame.image.load("player.png").convert()
-        self.imp3 = pygame.image.load("playerRed.png").convert()
-        self.imp4 = pygame.image.load("playerShield.png").convert()
+        self.imp = pygame.image.load("assets/player.png").convert()
+        self.imp3 = pygame.image.load("assets/playerRed.png").convert()
+        self.imp4 = pygame.image.load("assets/playerShield.png").convert()
         self.imp2 = self.imp 
-        self.gun = pygame.image.load("gun.png").convert()
+        self.gun = pygame.image.load("assets/gun.png").convert()
         self.gun2 = self.gun
         self.rect = pygame.Rect(self.location[0]+25,self.location[1]+50,50,100)
     def update(self,screen):
@@ -57,11 +57,11 @@ class Bullet(pygame.sprite.Sprite):
         self.vely = y
         self.type = Btype
         self.time = time+400*length
-        self.imp = pygame.image.load("bullet.png").convert()
-        self.imp2 = pygame.image.load("bulletFreeze.png").convert()
+        self.imp = pygame.image.load("assets/bullet.png").convert()
+        self.imp2 = pygame.image.load("assets/bulletFreeze.png").convert()
         self.rect = pygame.Rect(self.location[0],self.location[1],20,20)
         if Btype == "flame":
-            self.imp = pygame.image.load("flame.png").convert()
+            self.imp = pygame.image.load("assets/flame.png").convert()
             self.rectSize = 30
     def update(self,screen):
         if self.type == "freeze":
@@ -83,15 +83,15 @@ class Enemy(pygame.sprite.Sprite):
         self.move = [0,0]
         if self.type == 1:
             self.health = 1
-            self.imp = pygame.image.load("enemy.png").convert()
+            self.imp = pygame.image.load("assets/enemy.png").convert()
             self.speed = 1
         elif self.type == 2:
             self.health = 3
-            self.imp = pygame.image.load("enemy2.png").convert()
+            self.imp = pygame.image.load("assets/enemy2.png").convert()
             self.speed = 1
         elif self.type == 3:
             self.health = 0.5
-            self.imp = pygame.image.load("enemy3.png").convert()
+            self.imp = pygame.image.load("assets/enemy3.png").convert()
             self.speed = 2
         elif self.type == 10:
             self.health = 40
