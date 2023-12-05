@@ -305,4 +305,4 @@ while (status):
             status = False
     pygame.display.flip()
 # deactivates the pygame library
-pygame.quit()s
+pygame.quit()
