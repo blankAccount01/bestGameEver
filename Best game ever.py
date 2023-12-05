@@ -95,7 +95,7 @@ class Enemy(pygame.sprite.Sprite):
             self.speed = 2
         elif self.type == 10:
             self.health = 40
-            self.imp = pygame.image.load("enemyBoss.png").convert()
+            self.imp = pygame.image.load("assets/enemyBoss.png").convert()
             self.rectSize = 100
             self.speed = 1
         self.timer = -1
